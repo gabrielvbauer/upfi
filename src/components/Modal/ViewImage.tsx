@@ -6,8 +6,6 @@ import {
   ModalBody,
   Image,
   Link,
-  ModalHeader,
-  ModalCloseButton,
 } from '@chakra-ui/react';
 
 interface ModalViewImageProps {
@@ -35,7 +33,7 @@ export function ModalViewImage({
           justifyContent="start"
           borderBottomRadius={6}
         >
-          <Link fontSize={14} href={imgUrl}>
+          <Link fontSize={14} href={imgUrl} target="_blank">
             Abrir original
           </Link>
         </ModalFooter>
