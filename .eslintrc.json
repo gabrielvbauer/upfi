@@ -42,6 +42,7 @@
         "endOfLine": "auto"
       }
     ],
+    "no-useless-return": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "jsx-a11y/anchor-is-valid": [
