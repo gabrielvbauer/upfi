@@ -8,8 +8,21 @@ import { api } from '../services/api';
 import { Loading } from '../components/Loading';
 import { Error } from '../components/Error';
 
+type DataFetched = {
+  data: [
+    {
+      title: string;
+      description: string;
+      url: string;
+      ts: number;
+      id: string;
+    }
+  ];
+  after: string | null;
+};
+
 export default function Home(): JSX.Element {
-  const fetchImages = ({ pageParam = null }): any => {
+  const fetchImages = ({ pageParam = null }): Promise<DataFetched> => {
     return api
       .get('/api/images', {
         params: {
